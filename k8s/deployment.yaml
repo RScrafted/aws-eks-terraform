@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rs-inventory-app
+  labels:
+    app: rs-inventory-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rs-inventory-app
+  template:
+    metadata:
+      labels:
+        app: rs-inventory-app
+    spec:
+      containers:
+      - name: rs-inventory-app
+        image: rscrafted/rs-inventory-app-prodn:latest
+        ports:
+        - containerPort: 8080
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+          requests:
+            memory: "256Mi"
+            cpu: "250m"

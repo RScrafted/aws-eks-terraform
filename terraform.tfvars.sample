@@ -1,0 +1,19 @@
+# terraform.tfvars.sample
+
+aws_region = "<aws-region>"
+
+# Optional: uncomment if using a specific AWS CLI profile.
+# aws_profile = "<aws-profile>"
+
+project_name = "<project-name>"
+environment  = "<environment>"
+
+cluster_version = "<kubernetes-version>"
+
+node_instance_types = [
+  "<ec2-instance-type>"
+]
+
+node_desired_size = <desired-node-count>
+node_min_size     = <minimum-node-count>
+node_max_size     = <maximum-node-count>
