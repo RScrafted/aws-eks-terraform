@@ -4,7 +4,7 @@
 - Includes Inventory App with two API endpoints to test. EKS auto creates Loadbalancer as part of native managed service.
 
 > [!IMPORTANT]
-> **Incurs charges**. Please use `terraform destroy` command when it is not in use.
+> **This Setup incurs charges**. Please use `terraform destroy` command when it is not in use.
 
 ## Architecture
 
@@ -69,25 +69,29 @@
 
 ## Repository Structure
 
-```
-terraform-eks/
-├── main.tf
-├── variables.tf
-├── outputs.tf
-├── providers.tf
-├── terraform.tfvars
-├── modules/
-│   ├── vpc/
+```bash
+# tree -v --dirsfirst
+.
+├── k8s
+│   ├── deployment.yaml
+│   └── service.yaml
+├── modules
+│   ├── eks
 │   │   ├── main.tf
-│   │   ├── variables.tf
-│   │   └── outputs.tf
-│   └── eks/
+│   │   ├── outputs.tf
+│   │   └── variables.tf
+│   └── vpc
 │       ├── main.tf
-│       ├── variables.tf
-│       └── outputs.tf
-└── k8s/
-    ├── deployment.yaml
-    └── service.yaml
+│       ├── outputs.tf
+│       └── variables.tf
+├── README.md
+├── main.tf
+├── outputs.tf
+├── provider.tf
+├── terraform.tfvars.sample
+└── variables.tf
+
+5 directories, 14 files
 ```
 
 ### Module responsibilities
