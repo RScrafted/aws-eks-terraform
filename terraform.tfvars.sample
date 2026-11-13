@@ -1,19 +1,19 @@
 # terraform.tfvars.sample
 
-aws_region = "<aws-region>"
+aws_region = "<aws-region>"               # eg: eu-west-2
 
 # Optional: uncomment if using a specific AWS CLI profile.
 # aws_profile = "<aws-profile>"
 
-project_name = "<project-name>"
-environment  = "<environment>"
+project_name = "<project-name>"           # eg: eks
+environment  = "<environment>"            # eg: prod / production
 
-cluster_version = "<kubernetes-version>"
+cluster_version = "<kubernetes-version>"  # eg: 1.36
 
 node_instance_types = [
-  "<ec2-instance-type>"
+  "<ec2-instance-type>"                   # eg: t3.small
 ]
 
-node_desired_size = <desired-node-count>
-node_min_size     = <minimum-node-count>
-node_max_size     = <maximum-node-count>
+node_desired_size = <desired-node-count>  # eg: 2
+node_min_size     = <minimum-node-count>  # eg: 1
+node_max_size     = <maximum-node-count>  # eg: 2
