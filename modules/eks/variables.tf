@@ -1,3 +1,4 @@
+# cluster_name is referenced from root/main.tf
 variable "cluster_name" {
   type = string
 }

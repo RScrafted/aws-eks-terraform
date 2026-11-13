@@ -3,9 +3,9 @@ variable "aws_region" {
   default = "eu-west-2"
 }
 
-# variable "aws_profile" {
-#   type = string
-# }
+variable "aws_profile" {
+  type = string
+}
 
 variable "project_name" {
   type    = string
