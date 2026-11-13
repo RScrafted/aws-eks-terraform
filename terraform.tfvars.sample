@@ -3,7 +3,7 @@
 aws_region = "<aws-region>"               # eg: eu-west-2
 
 # Optional: uncomment if using a specific AWS CLI profile.
-# aws_profile = "<aws-profile>"
+aws_profile = "<aws-profile>"
 
 project_name = "<project-name>"           # eg: eks
 environment  = "<environment>"            # eg: prod / production
